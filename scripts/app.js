@@ -20,14 +20,14 @@ var app = angular
         templateUrl: 'views/register.html' 
       })  
       .when('/post', {
-        templateUrl: 'views/post.html'
+        templateUrl: 'views/post.html',
         controller: 'TaskController'
       })
       .when('/edit', {
         templateUrl: 'views/edit.html'
       })
       .when('/browse', {
-        templateUrl: 'views/browse.html'
+        templateUrl: 'views/browse.html',
         controller: 'TaskController'
       })
       .otherwise({
