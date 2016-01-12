@@ -6,6 +6,7 @@ app.controller('TaskController', function($scope, FURL, $firebase, $location, $r
 	var fbTasks = $firebase(ref.child('tasks')).$asArray();
 	var taskId = $routeParams.taskId;
 
+
 	if(taskId) {
 		$scope.selectedTask = getTask(taskId);
 	}
