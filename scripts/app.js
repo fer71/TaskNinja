@@ -3,15 +3,16 @@
 var app = angular
   .module('TaskNinjaApp', [
     'ngAnimate',
-    'ngResource',    
-    'ngRoute',    
-    'firebase'
+    'ngResource',
+    'ngRoute',
+    'firebase',
+    'toaster'
   ])
-  .constant('FURL', 'https://task-ninjafer.firebaseio.com/')  
+  .constant('FURL', 'https://task-ninjafer.firebaseio.com/')
   .config(function ($routeProvider) {
-    $routeProvider      
+    $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html'        
+        templateUrl: 'views/main.html'
       })
       .when('/login', {
         templateUrl: 'views/login.html',
@@ -20,7 +21,7 @@ var app = angular
       .when('/register', {
         templateUrl: 'views/register.html',
         controller: 'AuthController'
-      })  
+      })
       .when('/post', {
         templateUrl: 'views/post.html',
         controller: 'TaskController'
