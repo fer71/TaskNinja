@@ -10,11 +10,11 @@
 			</button>
 			<a class="navbar-brand" href="#/">TaskNinja</a>
 		</div>
-		
+
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 			<ul class="nav navbar-nav navbar-left">
-				<li ng-show="signedIn()"><a  href="#/post">Post a Task</a></li>
+				<li ng-show="signedIn()"><a  href="" data-toggle="modal" data-target="#posModal">Post a Task</a></li>
 				<li><a href="#/browse">Browse Tasks</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
@@ -27,13 +27,13 @@
 				  	&nbsp;
 				  	{{currentUser.profile.name}}
 					<span class="mdi-navigation-expand-more"></span></a>
-				 
+
 				  <ul class="dropdown-menu">
 					<li><a href="" data-toggle="modal" data-target="#pasModal">
-						<i class="mdi-action-lock"></i> Change Password</a></li>		
-					<li><a href="#" ng-click="logout()">
-						<i class="mdi-action-exit-to-app"></i> Logout</a></li>	
-				  </ul>	
+						<i class="mdi-action-lock"></i> Change Password</a></li>
+					<li><a href="" ng-click="logout()">
+						<i class="mdi-action-exit-to-app"></i> Logout</a></li>
+				  </ul>
 			    </li>
 			</ul>
 
@@ -41,5 +41,5 @@
 	</div>
 
 	<div ng-show="signedIn()" ng-include="'views/partials/changepass.html'"></div>
-
-</nav>	
+	<div ng-show="signedIn()" ng-include="'views/partials/post.html'"></div>
+</nav>
